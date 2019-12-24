@@ -1,0 +1,26 @@
+@import '../../assets/sass/abstract/variables';
+@import '../../assets/sass/abstract/mixins';
+
+.ContactsList {
+    width: 95%;
+    max-width: 1200px;
+    border: 1px solid $light-grey;
+    border-radius: 4px;
+    box-shadow: 3px 3px 12px -1px rgba(153,176,168,0.35);
+    margin-bottom: $margin-sm;
+    background-color: white;
+}
+
+.listHeader {
+    display: none;
+    color: $primary-dark;
+    font-weight: 600;
+
+    @include respond(sm) {
+        display: flex;
+    }
+    
+    @include respond(md) {
+        display: table;
+    }
+}

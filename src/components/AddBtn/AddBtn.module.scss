@@ -1,0 +1,56 @@
+@import '../../assets/sass/abstract/variables';
+@import '../../assets/sass/abstract/mixins';
+
+.AddBtn {
+  display: block;
+  height: 35px;
+  width: 35px;
+  position: relative;
+  font-size: 0;
+  transition: all .2s;
+  
+  &:after,
+  &:before {
+    content: "";
+    width: 2px;
+    height: 70%;
+    background-color: $primary-light;
+    @include center-h-v;
+  }
+
+  &:before {
+    transform: translate(-50%, -50%) rotate(90deg);
+    transform-origin: center;
+  }
+
+  @include respond(md) {
+      & {
+        height: auto;
+        width: auto;
+        border-radius: 3.5px;
+        background: $primary-light;
+        color: white;
+        border: 1px solid $primary-light;
+        padding: 1rem;
+        font-size: 2rem;
+      }
+
+      &:link,
+      &:active {
+        background: $primary-light;
+        color: white;
+      }
+
+      &:hover {
+        background-color: white;
+        color: $primary-light;
+      }
+
+      &:before,
+      &:after {
+        width: 0;
+        height: 0;
+      }
+
+  }
+}

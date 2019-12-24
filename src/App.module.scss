@@ -1,0 +1,14 @@
+@import './assets/sass/abstract/variables';
+@import './assets/sass/abstract/mixins';
+
+.App {
+  text-align: center;
+  background: $off-white;
+  width: 100%;
+  min-width: 300px;
+  min-height: 100vh;
+}
+
+.main {
+  @include flex-vertical-container;
+}

@@ -1,0 +1,16 @@
+@import '../../../assets/sass/abstract/variables';
+@import '../../../assets/sass/abstract/mixins';
+
+.container {
+    width: 90%;
+    border: 1px solid $light-grey;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 3px 3px 12px -1px rgba(153,176,168,0.35);
+    margin-bottom: $margin-sm;
+    background-color: #fff;
+
+    @include respond(md) {
+        max-width: 600px;
+    }
+}

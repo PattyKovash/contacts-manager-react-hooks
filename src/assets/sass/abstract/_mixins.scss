@@ -1,0 +1,57 @@
+////////////////////////////////////////////////////////////////////////////////
+// TABLE OF CONTENTS
+// 1.0 - center-h-v
+// 2.0 - media query
+// 3.0 - flex-vertical-container
+////////////////////////////////////////////////////////////////////////////////
+
+// 1.0 - center-h-v
+//******************************************************************************
+
+@mixin center-h-v {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// END 1.0 - center-h-v
+//******************************************************************************
+
+// 2.0 - media query
+//******************************************************************************
+
+// Breakpoints from Bootstrap
+@mixin respond($breakpoint) {
+    @if $breakpoint == sm {
+        // Small devices (landscape phones, 576px and up)
+        @media (min-width: 36em) { @content };
+    }
+    @if $breakpoint == md {
+        // Medium devices (tablets, 768px and up)
+        @media screen and (min-width: 48em) { @content };
+    }
+    @if $breakpoint == lg {
+        // Large devices (desktops, 992px and up)
+        @media screen and (min-width: 62em) { @content };
+    }
+    @if $breakpoint == xl {
+        // Extra large devices (large desktops, 1200px and up)
+        @media screen and (min-width: 75em) { @content };
+    }
+}
+
+// END 2.0 - media query
+//******************************************************************************
+
+// 3.0 - flex-vertical-container
+//******************************************************************************
+
+@mixin flex-vertical-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// END 3.0 - center-h-v
+//******************************************************************************

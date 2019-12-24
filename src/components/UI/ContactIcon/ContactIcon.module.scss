@@ -1,0 +1,19 @@
+@import '../../../assets/sass/abstract/variables';
+
+.ContactIcon {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        background-color: $primary-dark;
+        color: white;
+        line-height: normal;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        height: 32px;
+        width: 32px;
+        line-height: 30px;
+        margin-right: 10px;
+    }
+}

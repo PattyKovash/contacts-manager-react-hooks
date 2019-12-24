@@ -1,0 +1,74 @@
+@import '../../assets/sass/abstract/mixins';
+@import '../../assets/sass/abstract/variables';
+
+.ContactRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+
+    &:hover {
+        background-color: #eee;
+    }
+
+    & > div {
+       display: none;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       vertical-align: middle;
+       white-space: nowrap;
+       padding: 1rem;
+
+    }
+
+    & .rowName {
+        display: block;
+        padding-left: 2rem;
+    }
+
+    @media screen and (min-width: 25em) {
+        & .controls {
+            display: block;
+            width: 10%;
+            width: 100px;
+        }
+    }
+
+    @include respond(sm) {
+        & .rowEmail {
+            display: block;
+        }
+    }
+
+
+    @include respond(md) {
+        display: table;
+        table-layout: fixed;
+
+        & .rowName,
+        & .rowEmail,
+        & .controls {
+            display: table-cell;
+        }
+    }
+        
+    @include respond(lg) {
+        & > div {
+            display: table-cell;
+        }
+    }
+
+}
+
+.controls {
+
+    & p {
+        display: inline-block;
+        cursor: pointer;
+    
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}
